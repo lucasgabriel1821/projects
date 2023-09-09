@@ -1,6 +1,7 @@
 from flask import Flask, request, render_template, redirect, url_for
 import pymysql
 
+
 app = Flask(__name__)
 
 DB_HOST = "127.0.0.1"
@@ -62,6 +63,9 @@ def editar_item(nome):
     cursor.execute('SELECT * FROM estoque WHERE nome = %s', (nome,))
     item = cursor.fetchone()
 
+    novo_nome = request.form.get('novo_nome', '')
+    nova_quantidade = request.form.get('nova_quantidade', '')
+
     if request.method == 'POST':
         novo_nome = request.form.get('novo_nome', None)
         nova_quantidade = request.form.get('nova_quantidade', None)
@@ -82,7 +86,6 @@ def editar_item(nome):
 
     conn.close()
     return render_template('editar.html', item=item)
-
 
 @app.route("/excluir/<string:nome>")
 def excluir_item(nome):

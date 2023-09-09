@@ -3,16 +3,15 @@
   <head>
     <title>Controle de Estoque</title>
     <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
+
   <body>
     <h1>Controle de Estoque da Técnica</h1>
     <br />
     <div class="buttons">
       <button><a href="/adicionar">Adicionar Item</a></button>
-
-      <form method="POST" action="/atualizar_itens">
-        <button type="submit">Enviar relação por E-mail</button>
-      </form>
+      <button type="submit">Enviar relação por E-mail</button>
     </div>
     <br /><br />
     <table>
@@ -27,7 +26,14 @@
         <td>{{ item[1] }}</td>
         <td>
           <button><a href="/editar/{{ item[0] }}">Editar</a></button> |
-          <button><a href="/excluir/{{ item[0] }}">Excluir</a></button>
+          <button>
+            <a
+              href="{{ url_for('excluir_item', nome=item[0]) }}"
+              class="excluir-button"
+              data-nome-item="{{ item[0] }}"
+              >Excluir</a
+            >
+          </button>
         </td>
       </tr>
       {% endfor %}
@@ -35,5 +41,18 @@
     <br />
 
     <footer><br /></footer>
+    <script>
+      $(document).ready(function () {
+        $(".excluir-button").on("click", function (e) {
+          e.preventDefault();
+          var nomeItem = $(this).data("nome-item");
+          if (
+            confirm("Você deseja realmente excluir o item '" + nomeItem + "'?")
+          ) {
+            window.location.href = $(this).attr("href");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

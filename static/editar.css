@@ -11,7 +11,6 @@ body {
   padding: 0;
 }
 
-
 .container {
   max-width: 400px;
   margin: 0 auto;
@@ -22,7 +21,7 @@ body {
 }
 
 .edit_item {
-  background-color: #f8f9faf3;
+  background-color: #f58634;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -31,7 +30,7 @@ body {
   border-radius: 20px;
   text-align: center;
   color: black;
-  border: 1px solid #f58634;
+  border: 1px solid black;
 }
 
 h1 {
@@ -53,16 +52,24 @@ input[type="number"] {
   margin: 0 auto;
 }
 
-.imput[type="submit"] {
-    border-radius: 10px;
-    padding: 10px;
-    outline: none;
-    font-size: 15px;
-    background-color: #f58634;
-    flex-direction: column;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
+input[type="submit"] {
+  border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+  background-color: white;
+  flex-direction: column;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: black;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  transition: 0.6s;
+  background-color:#f58634;
+  color: white;
 }
 
 a {
