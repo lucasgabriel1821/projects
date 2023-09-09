@@ -5,7 +5,7 @@ Att 01 { 08/09/2023 - 23:31: Foi adicionado um botão para envio da relação da
 Att 02 { 08/09/20023 a 09/09/2023:
   08/09/2023 - 23:52 - Arrumado estilização do botão "Adicionar" no momento de adicionar um item pois o mesmo não possuia estilização
   08/09/2023 - 23:58 - Arrumado estilização do botão "Salvar" no momento de alteração do nome ou quantidade do item, o mesmo não possuia estilização
-  9/09/2023 - 00:11 feat. Matheus Ranzatti - Corrigido o bug em que quando o usuario tentava fazer a alteração tanto do nome quanto da quantidade o sistema não acatava assim mantendo o mesmo nome e/ou quantidade.
+  09/09/2023 - 00:11 feat. Matheus Ranzatti - Corrigido o bug em que quando o usuario tentava fazer a alteração tanto do nome quanto da quantidade o sistema não acatava assim mantendo o mesmo nome e/ou quantidade.
   09/09/2023 - 00:46 - Foi inserido um pop-up para a confirmação da exclusão de um item na lista de estoque, garantindo a segurança de apagar um item com autoridade e não por engano.
 Obs: Ainda estou trabalhando na melhorida do projeto e para inserir a funcionalidade do botão de envio da relação do estoque.
 }
