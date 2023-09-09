@@ -83,6 +83,7 @@ def editar_item(nome):
     conn.close()
     return render_template('editar.html', item=item)
 
+
 @app.route("/excluir/<string:nome>")
 def excluir_item(nome):
     conn = pymysql.connect(

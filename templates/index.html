@@ -7,9 +7,14 @@
   <body>
     <h1>Controle de Estoque da Técnica</h1>
     <br />
+    <div class="buttons">
+      <button><a href="/adicionar">Adicionar Item</a></button>
 
-    <button><a href="/adicionar">Adicionar Item</a></button><br /><br />
-
+      <form method="POST" action="/atualizar_itens">
+        <button type="submit">Enviar relação por E-mail</button>
+      </form>
+    </div>
+    <br /><br />
     <table>
       <tr>
         <th>Nome</th>
@@ -27,5 +32,8 @@
       </tr>
       {% endfor %}
     </table>
+    <br />
+
+    <footer><br /></footer>
   </body>
 </html>
