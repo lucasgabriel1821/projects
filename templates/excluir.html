@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Excluir Item</title>
+    <link rel="stylesheet" href="/static/delete.css" />
+  </head>
+  <body>
+    <div class="delete">
+      <h1>Excluir Item</h1>
+      <a href="/">Voltar para a lista</a>
+      <p>Você tem certeza de que deseja excluir o item "{{ item[1] }}"?</p>
+      <form method="POST" action="/excluir/{{ item[0] }}">
+        <button>
+          <a href="{{ url_for('excluir_item', nome=item[1]) }}">Excluir</a>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
