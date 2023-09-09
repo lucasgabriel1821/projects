@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, url_for, session
+from flask import Flask, request, render_template, redirect, url_for
 import pymysql
 
 app = Flask(__name__)
@@ -25,9 +25,7 @@ def create_table():
     conn.commit()
     conn.close()
 
-
 create_table()
-
 
 @app.route("/")
 def index():
@@ -39,7 +37,6 @@ def index():
     estoque = cursor.fetchall()
     conn.close()
     return render_template("index.html", estoque=estoque)
-
 
 @app.route("/adicionar", methods=["GET", "POST"])
 def adicionar_item():
@@ -58,7 +55,6 @@ def adicionar_item():
         return redirect(url_for("index"))
     return render_template("adicionar.html")
 
-
 @app.route('/editar/<string:nome>', methods=['GET', 'POST'])
 def editar_item(nome):
     conn = pymysql.connect(host=DB_HOST, user=DB_USER, password=DB_PASSWORD, database=DB_NAME)
@@ -67,14 +63,19 @@ def editar_item(nome):
     item = cursor.fetchone()
 
     if request.method == 'POST':
-        if 'novo_nome' in request.form:
-            novo_nome = request.form['novo_nome']
-            if novo_nome:
-                cursor.execute('UPDATE estoque SET nome = %s WHERE nome = %s', (novo_nome, nome))
-        if 'nova_quantidade' in request.form:
-            nova_quantidade = request.form['nova_quantidade']
-            if nova_quantidade:
-                cursor.execute('UPDATE estoque SET quantidade = %s WHERE nome = %s', (nova_quantidade, nome))
+        novo_nome = request.form.get('novo_nome', None)
+        nova_quantidade = request.form.get('nova_quantidade', None)
+
+        if novo_nome:
+            cursor.execute(
+                'UPDATE estoque SET nome = %s WHERE nome = %s', (novo_nome, nome)
+            )
+
+        if nova_quantidade:
+            cursor.execute(
+                'UPDATE estoque SET quantidade = %s WHERE nome = %s', (nova_quantidade, nome)
+            )
+
         conn.commit()
         conn.close()
         return redirect(url_for('index'))
@@ -92,7 +93,6 @@ def excluir_item(nome):
     conn.commit()
     conn.close()
     return redirect(url_for("index"))
-
 
 if __name__ == "__main__":
     app.run(debug=True)
