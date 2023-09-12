@@ -9,3 +9,7 @@ Att 02 { 08/09/20023 a 09/09/2023:
   09/09/2023 - 00:46 - Foi inserido um pop-up para a confirmação da exclusão de um item na lista de estoque, garantindo a segurança de apagar um item com autoridade e não por engano.
 Obs: Ainda estou trabalhando na melhorida do projeto e para inserir a funcionalidade do botão de envio da relação do estoque.
 }
+
+Att 03 { 11/09/2023 - 22:05: Estilização de todas as páginas, inserindo bootstrap nas mesmas.
+Obs: Botão de envio de relação por e-mail ainda não está funcionando.
+}
