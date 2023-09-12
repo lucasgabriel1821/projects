@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Controle de Estoque</title>
-    <link rel="stylesheet" type="text/css" href="/static/styles.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  </head>
 
-  <body>
+<head>
+  <title>Controle de Estoque</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+</head>
+
+<body>
+  <div class="container">
     <h1>Controle de Estoque da Técnica</h1>
     <br />
     <div class="buttons">
-      <button><a href="/adicionar">Adicionar Item</a></button>
-      <button type="submit">Enviar relação por E-mail</button>
+      <button class="btn btn-custom"><a href="/adicionar">Adicionar Item</a></button>
+      <button type="submit" class="btn btn-custom">Enviar relação por E-mail</button>
     </div>
     <br /><br />
-    <table>
-      <tr>
-        <th>Nome</th>
-        <th>Quantidade</th>
-        <th>Ações</th>
-      </tr>
-      {% for item in estoque %}
-      <tr>
-        <td>{{ item[0] }}</td>
-        <td>{{ item[1] }}</td>
-        <td>
-          <button><a href="/editar/{{ item[0] }}">Editar</a></button> |
-          <button>
-            <a
-              href="{{ url_for('excluir_item', nome=item[0]) }}"
-              class="excluir-button"
-              data-nome-item="{{ item[0] }}"
-              >Excluir</a
-            >
-          </button>
-        </td>
-      </tr>
-      {% endfor %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in estoque %}
+        <tr>
+          <td>{{ item[0] }}</td>
+          <td>{{ item[1] }}</td>
+          <td>
+            <button class="btn btn-warning btn-custom"><a href="/editar/{{ item[0] }}">Editar</a></button> |
+            <button class="btn btn-danger btn-custom">
+              <a href="{{ url_for('excluir_item', nome=item[0]) }}" class="excluir-button"
+                data-nome-item="{{ item[0] }}">Excluir</a>
+            </button>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
     <br />
 
@@ -54,5 +59,7 @@
         });
       });
     </script>
-  </body>
+  </div>
+</body>
+
 </html>

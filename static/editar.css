@@ -11,6 +11,12 @@ body {
   padding: 0;
 }
 
+.btn-primary {
+  background-color: whitesmoke;
+  color: black;
+  border: 0px;
+}
+
 .container {
   max-width: 400px;
   margin: 0 auto;

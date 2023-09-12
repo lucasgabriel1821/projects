@@ -16,6 +16,12 @@ h1 {
   text-align: center;
 }
 
+.btn-custom {
+  background-color: #f58634;
+  color: white;
+  border: 0px;
+}
+
 a {
   color: white;
   text-decoration: none;
