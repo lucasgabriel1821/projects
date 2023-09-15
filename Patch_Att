@@ -13,3 +13,7 @@ Obs: Ainda estou trabalhando na melhorida do projeto e para inserir a funcionali
 Att 03 { 11/09/2023 - 22:05: Estilização de todas as páginas, inserindo bootstrap nas mesmas.
 Obs: Botão de envio de relação por e-mail ainda não está funcionando.
 }
+
+Att 04 { 15/09/2023 - 08:30: Foi adicionado a função de filtrar a lista de estoque tanto por ordem alfabetica quanto por quantidade, também foi adicionado o filtro de pesquisa por item.
+Obs: Botão de envio de relação por e-mail ainda não está funcionando.
+}
