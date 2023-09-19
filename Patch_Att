@@ -18,7 +18,7 @@ Att 04 { 15/09/2023 - 08:30: Foi adicionado a função de filtrar a lista de est
 Obs: Botão de envio de relação por e-mail ainda não está funcionando.
 }
 
-Att 05 { 18/09/2023 - 21:58: O botão de envio da relação por email está habilitado, basta clicar que abrirá um pop-up e o usuário deverá digitar o destinatário para o recebimento do email. O próroio sistema dará uma mensagem de erro caso não envie o email e uma confirmação caso haja o envio.
+Att 05 { 18/09/2023 - 21:58: O botão de envio da relação por email está habilitado, basta clicar que abrirá um pop-up e o usuário deverá digitar o destinatário para o recebimento do email. O próprio sistema dará uma mensagem de erro caso não envie o email e uma confirmação caso haja o envio.
 
 Obs: O envio ainda não funciona com e-mails que possuem a verificação de 2 etapas, pois o algoritmo do Google considera um software malicioso. Irei trabalhar nessa questão em breve.
 }
