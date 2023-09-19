@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/email.css" />
+    <title>Envio por e-mail</title>
+  </head>
+  <body>
+    <div class="envio">
+      <h1>Enviar relação por E-mail</h1>
+      <br />
+      <form action="/enviar_email" method="post">
+        <label for="email">Digite seu endereço de e-mail:</label><br /><br />
+        <input type="email" id="email" name="email" required /><br />
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+  </body>
+</html>

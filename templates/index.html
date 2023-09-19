@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Controle de Estoque</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="/static/styles.css" />
 </head>
+<body>
+  
+</body>
+</html>
 
 <body>
   <div class="container">
@@ -16,10 +22,10 @@
     <br />
     <div class="buttons">
       <button class="btn btn-custom"><a href="/adicionar">Adicionar Item</a></button>
-      <button type="submit" class="btn btn-custom">Enviar relação por E-mail</button>
+      <button type="button" class="btn btn-custom" id="enviarEmailButton">Enviar relação por E-mail</button>
     </div>
     <br /><br />
-    <table class="table">
+    <table id="list" class="display">
       <thead>
         <tr>
           <th>Nome</th>
@@ -44,8 +50,6 @@
       </tbody>
     </table>
     <br />
-
-    <footer><br /></footer>
     <script>
       $(document).ready(function () {
         $(".excluir-button").on("click", function (e) {
@@ -59,6 +63,40 @@
         });
       });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#list').DataTable();
+      });
+    </script>
+  <script>
+    $(document).ready(function () {
+      $('#list').DataTable();
+  
+      // Configurar o clique do botão "Enviar relação por E-mail"
+      $("#enviarEmailButton").on("click", function () {
+        // Solicitar o endereço de e-mail do destinatário
+        var destinatario_email = prompt("Digite o endereço de e-mail para enviar a relação:", "");
+        if (destinatario_email) {
+          // Enviar o endereço de e-mail para o servidor Flask
+          $.ajax({
+            type: "POST",
+            url: "/enviar_email",
+            data: { email: destinatario_email },
+            success: function (response) {
+              alert(response); // Exibir a resposta do servidor (sucesso ou erro)
+            },
+            error: function (error) {
+              console.error("Erro ao enviar e-mail: ", error);
+            }
+          });
+        }
+      });
+    });
+  </script>
+  
+    
   </div>
 </body>
 

@@ -11,26 +11,7 @@ body {
   padding: 0;
 }
 
-.btn-outline-light {
-  color: black;
-}
-
-.container {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.new_item {
+.envio {
   background-color: #f58634;
   position: absolute;
   top: 50%;
@@ -42,8 +23,7 @@ h1 {
   border: 1px solid black;
 }
 
-input[type="text"],
-input[type="number"] {
+input[type="email"] {
   border-radius: 10px;
   padding: 10px;
   outline: none;
@@ -66,18 +46,8 @@ input[type="submit"] {
   display: block;
   margin: 0 auto;
   color: black;
-
 }
 
 input[type="submit"]:hover {
   cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: #f58634;
-}
-
-a:hover {
-  text-decoration: none;
 }

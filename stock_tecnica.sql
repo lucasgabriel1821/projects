@@ -7,3 +7,4 @@ CREATE TABLE estoque (
     nome VARCHAR(255) NOT NULL,
     quantidade INT NOT NULL
 );
+SELECT * FROM estoque;
