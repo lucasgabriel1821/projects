@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,11 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="/static/styles.css" />
 </head>
+
 <body>
-  
+
 </body>
+
 </html>
 
 <body>
@@ -70,33 +73,29 @@
         $('#list').DataTable();
       });
     </script>
-  <script>
-    $(document).ready(function () {
-      $('#list').DataTable();
-  
-      // Configurar o clique do botão "Enviar relação por E-mail"
-      $("#enviarEmailButton").on("click", function () {
-        // Solicitar o endereço de e-mail do destinatário
-        var destinatario_email = prompt("Digite o endereço de e-mail para enviar a relação:", "");
-        if (destinatario_email) {
-          // Enviar o endereço de e-mail para o servidor Flask
-          $.ajax({
-            type: "POST",
-            url: "/enviar_email",
-            data: { email: destinatario_email },
-            success: function (response) {
-              alert(response); // Exibir a resposta do servidor (sucesso ou erro)
-            },
-            error: function (error) {
-              console.error("Erro ao enviar e-mail: ", error);
-            }
-          });
-        }
+    <script>
+      $(document).ready(function () {
+        $('#list').DataTable();
+        $("#enviarEmailButton").on("click", function () {
+          var destinatario_email = prompt("Digite o endereço de e-mail para enviar a relação:", "");
+          if (destinatario_email) {
+            $.ajax({
+              type: "POST",
+              url: "/enviar_email",
+              data: { email: destinatario_email },
+              success: function (response) {
+                alert(response);
+              },
+              error: function (error) {
+                console.error("Erro ao enviar e-mail: ", error);
+              }
+            });
+          }
+        });
       });
-    });
-  </script>
-  
-    
+    </script>
+
+
   </div>
 </body>
 

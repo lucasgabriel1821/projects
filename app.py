@@ -4,9 +4,9 @@ import yagmail
 
 app = Flask(__name__)
 
-DB_HOST = "******"
-DB_USER = "******"
-DB_PASSWORD = "******"
+DB_HOST = "127.0.0.1"
+DB_USER = "root"
+DB_PASSWORD = "28491@Lucas"
 DB_NAME = "estoque"
 
 def create_table():
@@ -42,8 +42,8 @@ def obter_itens_do_banco():
     return itens
 
 def enviar_email_com_lista(estoque, destinatario_email):
-    remetente_email = "email@email.com"
-    remetente_senha = "******"
+    remetente_email = "lucas.gabriel@webrota.com.br"
+    remetente_senha = "28491@Lucas"
 
     yag = yagmail.SMTP(remetente_email, remetente_senha)
 
@@ -145,3 +145,4 @@ def excluir_item(nome):
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
