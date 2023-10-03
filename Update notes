@@ -1,27 +1,31 @@
-Aqui será informado as atualizações do projeto com o formato DD/MM/AA - HH/MM
+Neste documento, você encontrará todas as informações sobre as novas funcionalidades, melhorias e correções implementadas durante o desenvolvimento e melhorida da API.
 
-Att 01 { 08/09/2023 - 23:31: Foi adicionado um botão para envio da relação da lista de estoque, ainda não foi finalizado, possui somente estilização.}
+Neste update notes, você encontrará uma lista detalhada das alterações realizadas, incluindo descrições das funcionalidades adicionadas, melhorias de desempenho, correções de bugs e outras alterações relevantes.
 
-Att 02 { 08/09/20023 a 09/09/2023:
-  08/09/2023 - 23:52 - Arrumado estilização do botão "Adicionar" no momento de adicionar um item pois o mesmo não possuia estilização
-  08/09/2023 - 23:58 - Arrumado estilização do botão "Salvar" no momento de alteração do nome ou quantidade do item, o mesmo não possuia estilização
-  09/09/2023 - 00:11 feat. Matheus Ranzatti - Corrigido o bug em que quando o usuario tentava fazer a alteração tanto do nome quanto da quantidade o sistema não acatava assim mantendo o mesmo nome e/ou quantidade.
-  09/09/2023 - 00:46 - Foi inserido um pop-up para a confirmação da exclusão de um item na lista de estoque, garantindo a segurança de apagar um item com autoridade e não por engano.
+Fique à vontade para explorar as novidades e aproveitar ao máximo as melhorias trazidas. Agradeço por fazer parte da minha jornada de desenvolvimento contínuo.
+
+Sprint 01 { 08/09/2023: Foi adicionado um botão para envio da relação da lista de estoque, ainda não foi finalizado, possui somente estilização.}
+
+Sprint 02 { 08/09/20023 a 09/09/2023:
+  08/09/2023: Corrigido estilização do botão "Adicionar" no momento de adicionar um item pois o mesmo não possuia estilização
+  08/09/2023: Corrigido estilização do botão "Salvar" no momento de alteração do nome ou quantidade do item, o mesmo não possuia estilização
+  09/09/2023 ft. Matheus Ranzatti - Corrigido o bug em que quando o usuario tentava fazer a alteração tanto do nome quanto da quantidade o sistema não acatava assim mantendo o mesmo nome e/ou quantidade.
+  09/09/2023: Foi inserido um pop-up para a confirmação da exclusão de um item na lista de estoque, garantindo a segurança de apagar um item com autoridade e não por engano.
 Obs: Ainda estou trabalhando na melhorida do projeto e para inserir a funcionalidade do botão de envio da relação do estoque.
 }
 
-Att 03 { 11/09/2023 - 22:05: Estilização de todas as páginas, inserindo bootstrap nas mesmas.
+Sprint 03 { 11/09/2023: Estilização de todas as páginas, inserindo bootstrap nas mesmas.
 Obs: Botão de envio de relação por e-mail ainda não está funcionando.
 }
 
-Att 04 { 15/09/2023 - 08:30: Foi adicionado a função de filtrar a lista de estoque tanto por ordem alfabetica quanto por quantidade, também foi adicionado o filtro de pesquisa por item.
+Sprint 04 { 15/09/2023: Foi adicionado a função de filtrar a lista de estoque tanto por ordem alfabetica quanto por quantidade, também foi adicionado o filtro de pesquisa por item.
 Obs: Botão de envio de relação por e-mail ainda não está funcionando.
 }
 
-Att 05 { 18/09/2023 - 21:58: O botão de envio da relação por email está habilitado, basta clicar que abrirá um pop-up e o usuário deverá digitar o destinatário para o recebimento do email. O próprio sistema dará uma mensagem de erro caso não envie o email e uma confirmação caso haja o envio.
+Sprint 05 { 18/09/2023: O botão de envio da relação por email está habilitado, basta clicar que abrirá um pop-up e o usuário deverá digitar o destinatário para o recebimento do email. O próprio sistema dará uma mensagem de erro caso não envie o email e uma confirmação caso haja o envio.
 
 Obs: O envio ainda não funciona com e-mails que possuem a verificação de 2 etapas, pois o algoritmo do Google considera um software malicioso.
 }
 
-Att 06 { 25/09/2023 - 15:15: Foi feito a tradução das labels da tabela. (ex: A barra de pesquisar estava em inglês)
+Sprint 06 { 25/09/2023: Foi feito a tradução das labels da tabela. (ex: A barra de pesquisar estava em inglês)
 }
